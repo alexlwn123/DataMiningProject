@@ -19,10 +19,11 @@
 #### <a name="Alg"></a>*Algorithm Description**
 
 #### <a name="Intro"></a>**Problem Introduction**
+We want to identify communities of highly connected authors and also predict if an author is within one of these communities. Additionally, we want to be able to predict if an author is within a specified highly connected community with 3 or greater neighbors.
 #### <a name="Dataset"></a>**Problem Introduction**
 
 ![Data Visualization](images/plot.pdf)
-
+Our dataset has 5,242 nodes and 28,980 edges, and this dataset describes a collaboration network. In the dataset, a node/vertex represents an author and an edge represents a coauthorship between two authors. 
 
 ## <a name="Experiment"></a>**Experiment**
 ## <a name="Results"></a>**Results**
