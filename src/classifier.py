@@ -101,16 +101,6 @@ def main():
   print(f'\nMicro F1 Score: {microF1 :.3f}')
 
     
-  #first_col = data_undirected.iloc[:,0]
-  #second_col =  data_undirected.iloc[:,1]
-  #reverse = pd.concat([second_col, first_col], axis=1)
-  #symmetric_undirected = pd.concat([data_undirected, reverse]).reset_index()
-
-
-  #counts = first_col[:1000].value_counts()
-  #counts.plot.bar()
-  #plt.show()
-
 if __name__ == '__main__':
   import timeit
   main()
