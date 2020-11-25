@@ -19,12 +19,12 @@ def save_graph(graph,file_name):
 def find(uf, u):
   """
   Test uf = u
-  >>> find(899, 899)
-  899
+  >>> find([0, 1], 1)
+  1
 
   Test uf != u
-  >>> find(899, 543)
-  899
+  >>> find([0, 1], 0)
+  0
   """
   if u == uf[u]:
     return uf[u]
