@@ -1,13 +1,39 @@
-# DataMiningProject
-Comp 5130 Rule-Based Classifications
-
+# Comp 5130: Implementation of Rule-Based Classification Algorithm
+## Robby March, Alex Lewin
 ## Table of Contents
 
+* [**Backround**](#Backround)
+  * [**Algorithm Description**](#Alg)
+  * [**Problem Introduction**](#Intro)
+  * [**Dataset**](#Dataset)
+* [**Experiment**](#Experiment)
+  * [**Results**](#Results)
 * [**Requirements**](#Requirements)
 * [**Install**](#Install)
 * [**Run Project**](#Run-Project)
   * [**Run Classifier**](#Run-Classifier)
   * [**Run Doctests**](#Run-Doctests)
+
+## <a name="Backround"></a>**Backround**
+
+#### <a name="Alg"></a>*Algorithm Description**
+
+#### <a name="Intro"></a>**Problem Introduction**
+#### <a name="Dataset"></a>**Problem Introduction**
+
+![Data Visualization](images/plot.pdf)
+
+
+## <a name="Experiment"></a>**Experiment**
+## <a name="Results"></a>**Results**
+| Distance | Micro-F1 (Inside) | Micro-F1 (Outside) | Macro-F1 |
+| -------- | ----------------- | ------------------ | -------- |
+| 3        | 0.861             | 0.459              | 0.660    |
+| 5        | 0.919             | 0.575              | 0.747    |
+| 7        | 0.936             | 0.590              | 0.763    |
+| 9        | 0.960             | 0.611              | 0.785    |
+| 11       | 0.979             | 0.623              | 0.801    |
+| 13       | 0.992             | 0.627              | 0.809    |
 
 ## <a name="Requirements"></a>**Requirements**
 
