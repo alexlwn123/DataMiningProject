@@ -1,3 +1,5 @@
 Lib/**
 share/**
 *.pdf
+*pycache*
+.*
