@@ -51,6 +51,14 @@ def union(u, v, uf, size):
     uf[ur] = vr
     find(uf, u)
 
+def getMicroF1(tp, fp, fn): 
+
+  precision = tp / (tp + fp)
+  accuracy = tp / (tp + fn)
+
+  f1 = (precision + accuracy) / 2
+  return f1
+
 def main():
   #G = nx.read_edgelist("data\class_data\CA-GrQc.txt", nodetype=int)
   #save_graph(G, "plot.pdf")
@@ -75,6 +83,12 @@ def main():
   not_in_cluster = [x for x in range(len(uf)) if find(uf, x) != head and counts[x] >= 1]
   not_in_cluster_with3 = [x for x in range(len(uf)) if find(uf, x) != head and counts[x] >= X]
 
+  false_negatives = len(not_in_cluster_with3)
+  true_positives = len(more)
+  false_positives = len(hasX) - true_positives
+
+  microF1 = getMicroF1(true_positives, false_positives, false_negatives)
+
 
   print(f"Not in cluster (Negative Coverage): {len(not_in_cluster)}")
   print(f"Not in cluster with {X} neighbors (Incorrect Negative Classifications): {len(not_in_cluster_with3)}")
@@ -84,6 +98,7 @@ def main():
   print(f"Has {X} neighbors and is in large cluster (Positive Classifications): {len(more)}")
   print(f"In large cluster: {len(members)}")
   print(f"Ratio: {len(more)*100/len(members):.3f} %")
+  print(f'\nMicro F1 Score: {microF1 :.3f}')
 
     
   #first_col = data_undirected.iloc[:,0]
