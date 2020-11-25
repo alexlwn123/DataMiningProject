@@ -102,6 +102,7 @@ def getMacroF1(scores):
 
 
 def main():
+  # Uncomment these lines to regenerate visualization
   #G = nx.read_edgelist("data\class_data\CA-GrQc.txt", nodetype=int)
   #save_graph(G, "plot.png")
   X = int(input("input number for Distance: "))
@@ -122,6 +123,7 @@ def main():
     counts[line[1]] += 1
     union(find(uf, line[0]), find(uf, line[1]), uf, size)
   
+  #Calculates Values
   head = size.index(max(size))
   members = [x for x in range(len(uf)) if find(uf, x) == head]
   more = [x for x in range(len(uf)) if counts[x] >= X and find(uf, x) == head]
@@ -129,6 +131,7 @@ def main():
   not_in_cluster = [x for x in range(len(uf)) if find(uf, x) != head and counts[x] >= 1]
   not_in_cluster_with3 = [x for x in range(len(uf)) if find(uf, x) != head and counts[x] >= X]
 
+  #Calculates F1 Scores
   false_negatives = len(not_in_cluster_with3)
   true_positives = len(more)
   false_positives = len(hasX) - true_positives
@@ -160,4 +163,5 @@ def main():
 if __name__ == '__main__':
   import timeit
   main()
+  #Uncomment this line to print runtime
   #print(timeit.timeit("main()"))
