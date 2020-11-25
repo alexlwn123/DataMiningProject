@@ -23,8 +23,8 @@ def find(uf, u):
   1
 
   Test uf != u
-  >>> find([0, 1], 0)
-  0
+  >>> find([2, 1, 1], 0)
+  1
   """
   if u == uf[u]:
     return uf[u]
