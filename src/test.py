@@ -68,9 +68,9 @@ def main():
 
 
   print(f"Not in cluster (Negative Coverage): {len(not_in_cluster)}")
-  print(f"Not in cluster with {X} cos (Incorrect Negative Classifications): {len(not_in_cluster_with3)}")
-  print(f"Ratio (negatives that trigger the rule): %{len(not_in_cluster_with3)*100/len(not_in_cluster)}")
-  print(f"Ratio (negative accuracy): %{100 - len(not_in_cluster_with3)*100/len(not_in_cluster)}")
+  print(f"Not in cluster with {X} neighbors (Incorrect Negative Classifications): {len(not_in_cluster_with3)}")
+  print(f"Ratio (negatives that trigger the rule): {len(not_in_cluster_with3)*100/len(not_in_cluster)}%")
+  print(f"Ratio (negative accuracy): %{100 - len(not_in_cluster_with3)*100/len(not_in_cluster)}%")
   print(f"Has {X} neighbors (Positive Coverage): {len(hasX)}")
   print(f"Has {X} neighbors and is in large cluster (Positive Classifications): {len(more)}")
   print(f"In large cluster: {len(members)}")
