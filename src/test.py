@@ -20,6 +20,15 @@ def save_graph(graph,file_name):
   del fig
 
 def find(uf, u):
+  """
+  Test uf = u
+  >>> find(899, 899)
+  899
+
+  Test uf != u
+  >>> find(899, 543)
+  899
+  """
   if u == uf[u]:
     return uf[u]
 
@@ -27,6 +36,10 @@ def find(uf, u):
   return uf[u]
 
 def union(u, v, uf, size):
+  """
+  Test None:
+  >>> union(4, 5, [1, 1, 1], [1, 2, 3])
+  """
   ur, vr = find(uf, u), find(uf, v)
   if ur == vr:
     return 
@@ -47,7 +60,7 @@ def main():
   #save_graph(G, "plot.pdf")
   X = int(input("input number for D: "))
 
-  with open("data\class_data\CA-GrQc.txt", 'r') as f:
+  with open("\data\class_data\CA-GrQc.txt", 'r') as f:
     lines = f.read().splitlines()
   
   lines = [list(map(int, line.split())) for line in lines]
@@ -59,6 +72,7 @@ def main():
     counts[line[1]] += 1
     union(find(uf, line[0]), find(uf, line[1]), uf, size)
   
+
   head = size.index(max(size))
   members = [x for x in range(len(uf)) if find(uf, x) == head]
   more = [x for x in range(len(uf)) if counts[x] >= X and find(uf, x) == head]
