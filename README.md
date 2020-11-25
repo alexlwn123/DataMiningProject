@@ -3,7 +3,6 @@
 ## Table of Contents
 
 * [**Backround**](#Backround)
-  * [**Algorithm Description**](#Alg)
   * [**Problem Introduction**](#Intro)
   * [**Dataset**](#Dataset)
 * [**Experiment**](#Experiment)
@@ -16,15 +15,16 @@
 
 ## <a name="Backround"></a>**Backround**
 
-#### <a name="Alg"></a>*Algorithm Description**
+We were tasked to implement a Rule-Based Classifier.
 
 #### <a name="Intro"></a>**Problem Introduction**
-#### <a name="Dataset"></a>**Problem Introduction**
+#### <a name="Dataset"></a>**Dataset**
 
-![Data Visualization](images/plot.pdf)
+<img src="plot.png" width=200>
 
 
 ## <a name="Experiment"></a>**Experiment**
+
 ## <a name="Results"></a>**Results**
 | Distance | Micro-F1 (Inside) | Micro-F1 (Outside) | Macro-F1 |
 | -------- | ----------------- | ------------------ | -------- |
@@ -36,6 +36,7 @@
 | 13       | 0.992             | 0.627              | 0.809    |
 
 ## <a name="Requirements"></a>**Requirements**
+Below are the requiremnts to run the test locally.
 
 * **Python 3** [Download](https://www.python.org/downloads/)   
 * **Git** [Download](https://git-scm.com/downloads)
@@ -55,7 +56,7 @@ cd DataMiningProject
 pip install -r requirements.txt 
 ```
 
-## <a name="Run-Project"><a/>Run Project
+## <a name="Run-Project">Run Project<a/>
 
 To run our project code, you can either run an interactive CLI or a set of pre-written tests via doctest.
 

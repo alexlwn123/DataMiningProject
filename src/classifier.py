@@ -102,9 +102,12 @@ def getMacroF1(scores):
 
 
 def main():
-  #G = nx.read_edgelist("data\class_data\CA-GrQc.txt", nodetype=int)
-  #save_graph(G, "plot.pdf")
-  X = int(input("input number for D: "))
+  G = nx.read_edgelist("data\class_data\CA-GrQc.txt", nodetype=int)
+  save_graph(G, "plot.png")
+  X = int(input("input number for Distance: "))
+  if X < 3:
+    print('Distance must be at least 3.\nExiting...')
+    return
 
   with open("data\class_data\CA-GrQc.txt", 'r') as f:
     lines = f.read().splitlines()
